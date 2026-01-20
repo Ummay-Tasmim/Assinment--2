@@ -62,9 +62,8 @@ body {
 
 
 
-/* =====================
-   HERO SECTION
-===================== */
+/* hero start */
+
 .hero {
   position: relative;
   padding: 120px 20px;
@@ -127,10 +126,8 @@ body {
   border-radius: 30px;
   text-decoration: none;
 }
+/* small device */
 
-/* =====================
-   SMALL DEVICE ≤576px
-===================== */
 @media (max-width: 576px) {
 
   .nav-menu {
@@ -175,10 +172,8 @@ body {
     flex-direction: column;
   }
 }
+/* medium device */
 
-/* =====================
-   MEDIUM DEVICE 577–992px
-===================== */
 @media (min-width: 577px) and (max-width: 992px) {
 
   .nav-menu {
@@ -199,9 +194,8 @@ body {
   }
 }
 
-/* =====================
-   LARGE DEVICE ≥993px
-===================== */
+/* large device */
+
 @media (min-width: 993px) {
 
   .nav-menu {
