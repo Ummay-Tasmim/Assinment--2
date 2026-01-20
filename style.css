@@ -366,9 +366,8 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 .episode-card p{color:#cfc7ff;}
 .episode-card span{color:#2cffb2; font-weight:bold;}
 
-/* end featured */
 
-/* ===== Host Section ===== */
+/* Host Section */
 .host-box{
   max-width:1100px;
   margin:0 auto 100px;
@@ -396,7 +395,6 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
   text-decoration:none;
 }
 
-/* ===== Responsive ===== */
 @media(max-width:576px){
   .episode-grid{grid-template-columns:1fr;}
   .host-box{flex-direction:column; text-align:center;}
@@ -414,7 +412,8 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
 
 /* featured end */
 
-/* Footer Base */
+/* Footer start*/
+
 .footer {
     background: linear-gradient(135deg, #1b0f2f, #2a145d);
     color: #ffffff;
@@ -423,13 +422,11 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Container */
 .footer-container {
     max-width: 1200px;
     margin: auto;
 }
 
-/* Brand */
 .brand {
     font-size: 42px;
     font-weight: 700;
@@ -440,7 +437,6 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     color: #d946ef;
 }
 
-/* Platforms */
 .platforms {
     display: flex;
     justify-content: center;
@@ -461,7 +457,7 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     opacity: 1;
 }
 
-/* Divider */
+
 .footer hr {
     border: none;
     height: 1px;
@@ -469,15 +465,11 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     margin: 25px 0;
 }
 
-/* Copyright */
 .footer p {
     font-size: 13px;
     opacity: 0.8;
 }
 
-/* ============================= */
-/* SMALL DEVICES (≤ 576px) */
-/* ============================= */
 @media (max-width: 576px) {
     .brand {
         font-size: 32px;
@@ -492,9 +484,6 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     }
 }
 
-/* ============================= */
-/* MEDIUM DEVICES (577px – 992px) */
-/* ============================= */
 @media (min-width: 577px) and (max-width: 992px) {
     .brand {
         font-size: 36px;
@@ -505,14 +494,13 @@ h2{text-align:center; margin:80px 0 50px; font-size:42px;}
     }
 }
 
-/* ============================= */
-/* LARGE DEVICES (≥ 993px) */
-/* ============================= */
 @media (min-width: 993px) {
     .brand {
         font-size: 44px;
     }
 }
+
+/* footer end */
 
 
 
