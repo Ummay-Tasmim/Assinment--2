@@ -1,3 +1,514 @@
-body{
-    background-image: url(./assets/hero-bg.png);
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: "Google Sans", sans-serif;
 }
+
+body {
+  background: radial-gradient(circle at top, #2b124c, #0b0618);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* navbar start */
+
+.navbar {
+ border-bottom: 1px solid rgba(65, 37, 103, 1);
+}
+
+.nav-container {
+  height: 92px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+}
+.logo span {
+  color:linear-gradient(135deg, #ff4fd8, #ffb347); ;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 16px;
+}
+
+.btn-gradient {
+  background: linear-gradient(135deg, #ff4fd8, #ffb347);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* navbar end */
+
+
+
+/* =====================
+   HERO SECTION
+===================== */
+.hero {
+  position: relative;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 720px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.podcast-circle {
+  width: 160px;
+  height: 160px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4fd8, #ffb347);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #2affb9;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin: 30px 0 15px;
+}
+
+.hero p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-outline {
+  border: 2px solid #2affb9;
+  color: #2affb9;
+  padding: 12px 26px;
+  border-radius: 30px;
+  text-decoration: none;
+}
+
+/* =====================
+   SMALL DEVICE ≤576px
+===================== */
+@media (max-width: 576px) {
+
+  .nav-menu {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #140824;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  #menu-toggle:checked ~ .nav-menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .hero {
+    padding: 90px 15px;
+  }
+
+  .podcast-circle {
+    width: 120px;
+    height: 120px;
+    font-size: 44px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+}
+
+/* =====================
+   MEDIUM DEVICE 577–992px
+===================== */
+@media (min-width: 577px) and (max-width: 992px) {
+
+  .nav-menu {
+    gap: 25px;
+  }
+
+  .hero {
+    padding: 110px 20px;
+  }
+
+  .podcast-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero h1 {
+    font-size: 46px;
+  }
+}
+
+/* =====================
+   LARGE DEVICE ≥993px
+===================== */
+@media (min-width: 993px) {
+
+  .nav-menu {
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+}
+
+/* hero section end */
+
+
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:70px 20px;
+  text-align:center;
+}
+
+.about h2{
+  font-size:42px;
+  margin-bottom:20px;
+}
+
+.about p{
+  max-width:800px;
+  margin:0 auto 50px;
+  color:#cfc7ff;
+  line-height:1.7;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:30px;
+}
+
+.stat{
+  background:#1f003d;
+  padding:35px 20px;
+  border-radius:15px;
+  box-shadow:0 0 25px rgba(0,0,0,.4);
+}
+
+.stat h3{
+  color:#2cffb2;
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.stat span{
+  color:#bfb6ff;
+  letter-spacing:1px;
+  font-size:14px;
+}
+
+/* Small device (0 - 576px) */
+@media(max-width:576px){
+  .about h2{font-size:30px;}
+  .stats{grid-template-columns:repeat(2,1fr); gap:15px;}
+  .container{padding:50px 15px;}
+}
+
+/* Medium device (576px - 992px) */
+@media(min-width:576px) and (max-width:992px){
+  .stats{grid-template-columns:repeat(2,1fr);}
+}
+
+/* Large device (above 993px) */
+@media(min-width:993px){
+  .stats{grid-template-columns:repeat(4,1fr);}
+} 
+
+
+/* about end  */
+
+
+.why h2{
+  text-align:center;
+  font-size:42px;
+  margin-bottom:60px;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:200px;
+  gap:25px;
+}
+
+/* Cards */
+.card{
+  background:linear-gradient(145deg,#2a0055,#1b0036);
+  padding:28px;
+  border-radius:20px;
+  box-shadow:0 10px 35px rgba(0,0,0,.6);
+  transition:.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 15px 45px rgba(44,255,178,.4);
+}
+
+.card h3{margin:15px 0 10px;}
+.card p{color:#d0c7ff; line-height:1.6;}
+.icon{font-size:38px}
+
+/* Figma-like layout */
+.big{grid-row:span 2;}
+.wide{grid-column:span 2;}
+
+/* Responsive */
+@media(max-width:576px){
+  .why-grid{grid-template-columns:1fr; grid-auto-rows:auto;}
+  .big,.wide{grid-row:auto; grid-column:auto;}
+}
+
+@media(min-width:576px) and (max-width:992px){
+  .why-grid{grid-template-columns:repeat(2,1fr); grid-auto-rows:auto;}
+  .big,.wide{grid-row:auto; grid-column:auto;}
+}
+
+@media(min-width:993px){
+  .why-grid{grid-template-columns:repeat(3,1fr);}
+}
+/* why end */
+
+
+
+h2{text-align:center; margin:80px 0 50px; font-size:42px;}
+
+/* ===== Featured Episodes ===== */
+.episode-grid{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.episode-card{
+  background:#220044;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 0 30px rgba(0,0,0,.5);
+}
+
+.video iframe{
+  width:100%;
+  height:200px;
+  border-radius:15px;
+  border:none;
+}
+
+.episode-card h3{margin:15px 0 10px;}
+.episode-card p{color:#cfc7ff;}
+.episode-card span{color:#2cffb2; font-weight:bold;}
+
+/* ===== Host Section ===== */
+.host-box{
+  max-width:1100px;
+  margin:0 auto 100px;
+  padding:40px;
+  background:#220044;
+  border-radius:25px;
+  display:flex;
+  gap:40px;
+  align-items:center;
+}
+
+.host-box img{
+  width:280px;
+  height:280px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.host-info h3{font-size:32px; margin-bottom:15px;}
+.host-info p{color:#d2c9ff; line-height:1.7;}
+
+.social a{
+  margin-right:12px;
+  font-size:22px;
+  text-decoration:none;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:576px){
+  .episode-grid{grid-template-columns:1fr;}
+  .host-box{flex-direction:column; text-align:center;}
+  .host-box img{width:220px; height:220px;}
+}
+
+@media(min-width:576px) and (max-width:992px){
+  .episode-grid{grid-template-columns:repeat(2,1fr);}
+  .host-box{flex-direction:column; text-align:center;}
+}
+
+@media(min-width:993px){
+  .episode-grid{grid-template-columns:repeat(3,1fr);}
+}
+
+/* featured end */
+
+/* Footer Base */
+.footer {
+    background: linear-gradient(135deg, #1b0f2f, #2a145d);
+    color: #ffffff;
+    text-align: center;
+    padding: 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container */
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Brand */
+.brand {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.brand span {
+    color: #d946ef;
+}
+
+/* Platforms */
+.platforms {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.platforms a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+}
+
+.platforms a:hover {
+    opacity: 1;
+}
+
+/* Divider */
+.footer hr {
+    border: none;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 25px 0;
+}
+
+/* Copyright */
+.footer p {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+/* ============================= */
+/* SMALL DEVICES (≤ 576px) */
+/* ============================= */
+@media (max-width: 576px) {
+    .brand {
+        font-size: 32px;
+    }
+
+    .platforms {
+        gap: 15px;
+    }
+
+    .platforms a {
+        font-size: 13px;
+    }
+}
+
+/* ============================= */
+/* MEDIUM DEVICES (577px – 992px) */
+/* ============================= */
+@media (min-width: 577px) and (max-width: 992px) {
+    .brand {
+        font-size: 36px;
+    }
+
+    .platforms a {
+        font-size: 14px;
+    }
+}
+
+/* ============================= */
+/* LARGE DEVICES (≥ 993px) */
+/* ============================= */
+@media (min-width: 993px) {
+    .brand {
+        font-size: 44px;
+    }
+}
+
+
+
